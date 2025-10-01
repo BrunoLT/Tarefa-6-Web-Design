@@ -1,0 +1,200 @@
+/* cores principais */
+:root{
+    --bg-color: #001429;
+    --bg2-color: #000814;
+    --text-color: #EFE9F4;
+}
+
+/*cor de fundo e fonte */
+body{
+    background-color: var(--bg-color);
+    font-family: poppins, sans-serif;
+}
+
+/*barra lateral direita*/
+.bar-r{
+    width: 60px;  
+    height: 100vh; 
+    background-color: var(--bg2-color);
+    position: fixed;
+    right: 0;
+    border-left: 2px solid #F5BC00;
+    z-index: 1;
+}
+
+/*barra lateral esquerda*/
+.bar-l{
+    width: 60px;  
+    height: 100vh; 
+    background-color: var(--bg2-color);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    border-right: 2px solid #F5BC00;
+}
+
+/*caixa superior*/
+.top-box{
+    width: 100%;
+    height: 100px;
+    background-color:  var(--bg2-color);
+    border-bottom: 2px solid #F5BC00;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+/*nome do site*/
+.titulo{
+    font-size: 40px;
+    font-family: Stencil Std, fantasy;
+    font-weight: bold;
+    color: #0069CC;
+    margin-left: 40%;
+    -webkit-text-stroke: rgb(0, 0, 53) 1px;
+}
+
+/*cor alternativa de parte do título*/
+.titulo span{
+    color: #FFD60A;
+}
+
+/*tamanho do container do subtitulo*/
+.container-start{
+    width: 100%;
+}
+
+/*caixa do subtitulo*/
+.box-start{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0%;
+    text-align: center;
+    margin-top: 2%;
+    font-size: large;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-shadow: -1px -1px 0 #000, /* efeito de borda */
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
+}
+
+/*detalhe na palavra*/
+.box-start h2 span{
+    color: #FFD60A;
+    font-weight: bold;
+    
+}
+
+/*estilo para detalhar palavra*/
+.komo{
+    color: #0069CC;
+    font-weight: bold;
+    --webkit-text-stroke: black 2px;
+}
+
+/*outro estilo para detalhar*/
+.dex{
+    color: #FFD60A;
+    font-weight: bold;
+}
+
+/*container principal que será repetido*/
+.container-main{
+    color: var(--text-color);
+    /* efeito de borda */
+    text-shadow: -1px -1px 0 #000, 
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
+    font-size: large;
+    text-align: center;
+    background-image: url('bg.webp');
+    margin-left: 3.95%;
+    margin-right: 3.95%;
+    border: 2px solid #F5BC00;
+}
+
+/*arrumar posicionamento do texto*/
+.containter-desc{
+    display: flex;
+}
+
+/*caixa que contém as imagens*/
+.box-image{
+    width: 300px;
+    height: 300px;
+    margin: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #F5BC00;
+    box-shadow: 0 0 10px #0069CC;
+    border-radius: 10px;
+    float: left;
+    display: flex;
+    padding: 3px;
+}
+
+/*estilização da borda*/
+.box-image:hover{
+    border: 2px solid turquoise;
+    box-shadow: 0 0 10px blue;
+    transform: scale(1.005);
+    animation: pulsate 2s infinite;
+}
+
+/* estilização dos textos descritivos */
+.desc{
+    padding: 10px;
+    position: relative;
+    top: 60px;
+    font-size: 1.2em;
+    font-family: poppins, sans-serif;
+    color: var(--text-color);
+    margin-right: 10%;
+    border-top: 2px solid #F5BC00;
+    margin-left: 30%;
+    text-shadow: -1px -1px 0 #000, /* efeito de borda */
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
+    border-radius: 5px;
+}
+
+/*estilização dos títulos*/
+.desc h3{
+    font-size: 30px;
+    color: #E0BB00;
+}
+
+/*estilização dos subtítulos*/
+.desc h4{
+    font-size: 20px;
+    color: #FFDE70;
+}
+
+/*efeito hover na descrição*/
+.desc:hover{
+    animation: pulsate 3s;
+}
+
+/*animação de pulsar*/
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 10px rgba(0, 123, 255, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
